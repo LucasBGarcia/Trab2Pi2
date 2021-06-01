@@ -1,0 +1,19 @@
+npm i ynit -y
+npm i express
+npm i knex
+npm i mysql2
+npm i dotenv
+
+npx knex init   - cria knexfile.js
+criar database manualmente no banco de dados
+npx knex migrate:make create_table_estoqueVinhos    - cria tabela estoqueVinhos
+npx knex migrate:latest     - roda a ultima alteração 
+npx knex migrate:rollback   - volta uma ação (desfaz o ultimo latest)
+
+npx knex migrate:make create_table_valores 
+
+npx knex seed:make 001_add_clientes                 -cria arquivo de inclusão nas tabelas
+npx knex seed:run                                   -inclui nas tabelas
+npx knex seed:run --specific=002_add_modelo.js      -inclui arquivo especifico
+npx knex migrate:make create_table_usuarios
+AULA 18 
